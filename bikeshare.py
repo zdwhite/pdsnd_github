@@ -187,6 +187,9 @@ def user_stats(df):
     print('-'*40)
 
 def sample(df):
+    """User input Yes or No
+
+    Prints 5 rows of data as long as the user keeps inputing yes"""
     a=0
     b=5
     while True:
@@ -207,7 +210,7 @@ def sample(df):
 
 
 def main():
-
+    """ Main program to execute the functions defined above"""
     # Promt user to filter the data by month, day, or not at all?
 
     while True:
