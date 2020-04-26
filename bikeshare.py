@@ -1,6 +1,8 @@
 import time
 import pandas as pd
 import numpy as np
+import traceback
+import matplotlib.pyplot as plt
 
 CITY_DATA = { 'Chicago': 'chicago.csv',
               'New York City': 'new_york_city.csv',
@@ -204,19 +206,21 @@ def sample(df):
                 continue
             if sample == 'no':
                 return
-        except:
-            print("\nan unexpected error occured")
-            continue
+        except Exception as e:
+            print("An unexpected {} error occured".format(Exception,e))
+            traceback.print_exc()
 
 def plots(df):
-    while true:
+    while True:
         viz = input("\nWould you like to see a distribution of start times for users? ['Yes','No']")
         try :
             if viz.lower() == 'yes':
-                print(df.hist(column='start_hour'))
+                (df.hist(column='start_hour')
+
                 return
-        except:
-            print('An unexpected Error Occured')
+        except Exception as e:
+            print("An unexpected {} error occured".format(Exception,e))
+            traceback.print_exc()
 
 
 def main():
@@ -238,7 +242,8 @@ def main():
             user_stats(df)
 
         except Exception as e:
-            print("An unexpected {} error occured".format(Exception))
+            print("An unexpected {} error occured".format(Exception,e))
+            traceback.print_exc()
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
