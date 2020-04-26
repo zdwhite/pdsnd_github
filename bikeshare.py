@@ -18,6 +18,7 @@ def get_filters():
     time.sleep(1)
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
+
         city = input('What City would you like to explore?[Chicago, New York City, Washington] ').title()
 
         month = input('What Month would you like to explore?[January,February,March ... or All] ').capitalize()
