@@ -8,6 +8,9 @@ Python Bike Share Data Shell Exploration
 This is a short project that allows a user to generate simple statistical
 summaries by city, month, and day using the terminal.
 
+It has some error handling but needs to be updated with more feedback so users
+know what errors are being thrown.
+
 ### Files used
 chicago.csv
 new_york_city.csv
