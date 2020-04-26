@@ -1,15 +1,18 @@
 ### Date created
-Include the date you created this project and README file.
+4/25/2020
 
 ### Project Title
-Replace the Project Title
+Python Bike Share Data Shell Exploration
 
 ### Description
-Describe what your project is about and what it does
+This is a short project that allows a user to generate simple statistical
+summaries by city, month, and day using the terminal.
 
 ### Files used
-Include the files used
+chicago.csv
+new_york_city.csv
+washington.csv
+bikeshare.py
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+stackoverflow.com ... somewhere some time it's always used.
