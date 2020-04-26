@@ -208,7 +208,15 @@ def sample(df):
             print("\nan unexpected error occured")
             continue
 
-
+def plots(df):
+    while true:
+        viz = input("\nWould you like to see a distribution of start times for users? ['Yes','No']")
+        try :
+            if viz.lower() == 'yes':
+                print(df.hist(column='start_hour'))
+                return
+        except:
+            print('An unexpected Error Occured')
 
 
 def main():
@@ -219,6 +227,7 @@ def main():
         try:
             city, month, day = get_filters()
             df = load_data(city, month, day)
+            plots(df)
             sample(df)
             time_stats(df)
             time.sleep(2.25)
