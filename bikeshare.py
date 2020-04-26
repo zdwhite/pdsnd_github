@@ -237,8 +237,8 @@ def main():
             time.sleep(2.75)
             user_stats(df)
 
-        except:
-            print("An unexpected error occured")
+        except Exception as e:
+            print("An unexpected {} error occured".format(Exception))
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
