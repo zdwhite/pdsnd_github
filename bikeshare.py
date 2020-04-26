@@ -215,14 +215,14 @@ def plots(df):
         viz = input("\nWould you like to see a distribution of start times for users? ['Yes','No']")
         try :
             if viz.lower() == 'yes':
-                (df.hist(column='start_hour')
-
+                df.hist(column='start_hour')
+                plt.show()
                 return
+            else continue
         except Exception as e:
             print("An unexpected {} error occured".format(Exception,e))
             traceback.print_exc()
-
-
+        
 def main():
     """ Main program to execute the functions defined above"""
     # Promt user to filter the data by month, day, or not at all?
